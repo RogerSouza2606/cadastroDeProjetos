@@ -6,17 +6,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 //@Entity(name = "projetos")
+@Entity
 public class Projeto {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	private int quantidade;
 	private double preco;
 	private String nome;
-	private Long id;
 	
-	
-	
+	public Projeto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public int getQuantidade() {
 		return quantidade;
 	}
